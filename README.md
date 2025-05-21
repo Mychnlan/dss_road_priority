@@ -44,7 +44,7 @@ This is a web-based Decision Support System (DSS) developed to assist in determi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/spk-road-priority.git
+   git clone https://github.com/Mychnlan/dss_road_priority.git
    cd spk-road-priority
 
 2. Install PHP dependencies using Composer:
