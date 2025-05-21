@@ -48,21 +48,25 @@ This is a web-based Decision Support System (DSS) developed to assist in determi
    cd spk-road-priority
 
 2. Install PHP dependencies using Composer:
-composer install
+   ```bash
+   composer install
 
-3. Install Node.js dependencies and compile assets:
-npm install
-npm run dev
+4. Install Node.js dependencies and compile assets:
+   ```bash
+   npm install
+   npm run dev
 
-4. Configure your environment variables:
+6. Configure your environment variables:
    - Copy .env.example to .env
    - Update database connection and other settings in .env
-
-cp .env.example .env
-php artisan key:generate
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
 
 5. Run database migrations:
-php artisan migrate
+   ```bash
+   php artisan migrate
 
-6. Start the development server:
-php artisan serve
+7. Start the development server:
+   ```bash
+   php artisan serve
