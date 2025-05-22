@@ -1,4 +1,4 @@
-# Road Repair Priority Decision Support System (SPK)
+# Road Repair Priority Decision Support System (DSS)
 
 This is a web-based Decision Support System (DSS) developed to assist in determining the priority of road repairs using the **Analytical Hierarchy Process (AHP)** and **Simple Additive Weighting (SAW)** methods. It allows users to input alternatives (roads), criteria, and make pairwise comparisons to calculate priority scores.
 
