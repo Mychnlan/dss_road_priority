@@ -18,14 +18,14 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Milan Heru',
                 'email' => 'milanhn518@gmail.com',
-                'password' => Hash::make('1235678'),
+                'password' => Hash::make('12345678'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'John Doe',
                 'email' => 'johndoe@gmail.com',
-                'password' => Hash::make('1235678'),
+                'password' => Hash::make('12345678'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

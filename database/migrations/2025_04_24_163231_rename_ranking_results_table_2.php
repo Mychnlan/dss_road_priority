@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::rename('ranking_result', 'ranking_results');
+        Schema::rename('rangking_results', 'ranking_results');
     }
 
     public function down(): void
     {
-        Schema::rename('ranking_results', 'ranking_result');
+        Schema::rename('ranking_results', 'rangking_results');
     }
 };

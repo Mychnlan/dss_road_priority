@@ -14,7 +14,16 @@
         {{ session('success') }}
     </div>
     @endif
-
+    @if (session('error')) 
+        <div 
+            x-data="{ show: true }" 
+            x-show="show" 
+            x-init="setTimeout(() => show = false, 3000)" 
+            class="fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 transition ease-in-out"
+        >
+            {{ session('error') }}
+        </div>
+    @endif
     <div class="py-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -81,13 +90,12 @@
                                                 ->where('session_id', $session->id)
                                                 ->where('user_id', Auth::id())
                                                 ->exists();
-                                        @endphp
+                                        @endphp                                      
                                         <a href="{{ route('weight.form', $session->id) }}" class="hover:text-blue-500">
-                                            {{ $hasWeights ? 'Edit Weight' : 'Add Weight' }}
+                                            {!! $hasWeights ? '<i class="fa-2x fa-solid fa-pen-to-square"></i>' : 'Add Weight' !!}
                                         </a>
-                                        <a href="{{ route('alternative', $session->id)}}" class="hover:text-blue-500">Eval</a>
-                                    </td>
-                                    
+                                        <a href="{{ route('alternative', $session->id)}}" class="hover:text-blue-500"><i class="fa-2x fa-duotone fa-solid fa-calculator"></i></a>
+                                    </td>                                    
                                 </tr>
                             @empty
                                 <tr>
@@ -100,7 +108,4 @@
             </div>
         </div>     
     </div>
-
-    
-
 </x-app-layout>

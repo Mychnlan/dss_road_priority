@@ -15,7 +15,13 @@ class PageController extends Controller
 {
     public function dashboard(): View
     {
-        return view('dashboard');
+
+        $userId = Auth::id();
+
+        // Hitung jumlah sesi perhitungan milik user ini
+        $sessionCount = DssSession::where('user_id', $userId)->count();
+
+        return view('dashboard', compact('sessionCount'));
     }
 
     public function spk(): View
