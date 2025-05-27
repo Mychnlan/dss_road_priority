@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Decision Support System') }}
+            {{ __('Penghitungan Alternative') }}
         </h2>
     </x-slot>
     @if (session('success'))
@@ -35,10 +35,6 @@
             {{ session('error') }}
         </div>
     @endif
-
-
-
-
 
     <div class="py-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -109,7 +105,7 @@
                                         @endphp
                                         <td class="px-4 py-2">{{ $grade ? $grade->grade : '-' }}</td>
                                     @endforeach
-                                    <td><a href="#" class="hover:text-blue-500">Eval</a></td>
+                                    <td><a href="#" class="text-white hover:text-blue-500 p-2 bg-orange-500 rounded-md"><i class="fa-solid fa-pen-to-square"></i></a></td>
                                 </tr>
 
                             @empty
